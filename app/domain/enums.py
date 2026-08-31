@@ -1,0 +1,38 @@
+from enum import Enum
+
+
+class AgentState(str, Enum):
+    OFFLINE = "OFFLINE"
+    AVAILABLE = "AVAILABLE"
+    RESERVED = "RESERVED"
+    DIALING = "DIALING"
+    CONNECTED = "CONNECTED"
+    WRAP_UP = "WRAP_UP"
+    PAUSED = "PAUSED"
+
+
+class CallState(str, Enum):
+    QUEUED = "QUEUED"
+    RESERVED = "RESERVED"
+    INITIATED = "INITIATED"
+    RINGING = "RINGING"
+    ANSWERED = "ANSWERED"
+    CONNECTED = "CONNECTED"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+
+
+class ProviderHealthStatus(str, Enum):
+    HEALTHY = "HEALTHY"
+    DEGRADED = "DEGRADED"
+    CRITICAL = "CRITICAL"
+    UNAVAILABLE = "UNAVAILABLE"
+
+
+class EventType(str, Enum):
+    INITIATED = "INITIATED"
+    RINGING = "RINGING"
+    ANSWERED = "ANSWERED"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
